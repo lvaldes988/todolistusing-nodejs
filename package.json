@@ -26,12 +26,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adrianacosta20/mongoLogin.git"
+    "url": "git+https://github.com/lvaldes988/mongoLogin.git"
   },
-  "author": "Adrian Acosta",
+  "author": "Liset Valdes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/adrianacosta20/mongoLogin/issues"
+    "url": "https://github.com/lvaldes988/mongoLogin/issues"
   },
-  "homepage": "https://github.com/adrianacosta20/mongoLogin#readme"
+  "homepage": "https://github.com/lvaldes988/mongoLogin#readme"
 }
