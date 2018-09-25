@@ -29,7 +29,7 @@ app.set('view engine', 'ejs'); // set up ejs for templating
 app.use(function (req, res, next) {
 
   // Website you wish to allow to connect
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:7779');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:7777');
 
   // Request methods you wish to allow
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
