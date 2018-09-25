@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Todo App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+
+<body class="todos-body">
+    <div class="todos-header">
+        <div class='todos-header-wrapper'>
+            <div class="title"> Hi
+                <%= user.name.split(' ')[0] %>!</div>
+
+        </div>
+        <nav class="todos-navbar navbar-light bg-light">
+
+            <div class="todos-navbar-links">
+                <a class="todos-navbar-link" href="/update-profile">Edit Profile</a>
+                <a class="todos-navbar-link" href="/logout">Logout</a>
+            </div>
+
+        </nav>
+    </div>
+    <div class="todos-screen">
+        <div class="input-container">
+            <input class="todo-input" type="text" id="todo_input" />
+
+            <div id="btn_create" class="btn-container">
+                <span class="icon-lg ion-ios-plus-outline"></span>
+            </div>
+
+        </div>
+
+
+
+        <div id="todos_container" class="todos-container cool-scroll-bar-17">
+            <% if (todos.length) { %>
+                <% for(var i = 0; i < todos.length; i++) {%>
+                    <div id="<%= todos[i].id %>" class="todo-container <% if (todos[i].complete) { %> checked <% } %>">
+                        <div id="btn_delete" class="remove">
+                            <span class="ion-trash-a icon-remove"></span>
+                        </div>
+                        <div data-complete="<%= todos[i].complete %>" class="todo" id="todo">
+                            <%= todos[i].task %>
+                        </div>
+                    </div>
+                    <% } %>
+                        <% } %>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

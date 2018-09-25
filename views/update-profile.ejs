@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update Profile</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,500i,600,700,800,900,900i" rel="stylesheet">
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
+
+
+
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/logo.png">
+</head>
+
+<body class="update-profile-body">
+
+    <nav class="update-profile-navbar update-profile-navbar-light bg-light">
+
+       
+        <div class="update-profile-navbar-links">
+            <a class="update-profile-navbar-link" href="/get-todos">Todos</a>
+            <a class="update-profile-navbar-link" href="/logout">Logout</a>
+        </div>
+
+    </nav>
+
+    <form method="update-profile-post" class="update-profile-form">
+        <div class='update-profile-wrapper'>
+            <!-- show any messages that come back with authentication -->
+            <% if (message.length > 0) { %>
+                <div class="alert alert-danger">
+                    <%= message %>
+                </div>
+                <% } %>
+
+                    <input required type="text" placeholder="name" name="name" id="name" value="<%= user.name %>" />
+                    <input required type="email" placeholder="Email" name="email" id="email" value="<%= user.email %>" />
+                    <input required type="password" placeholder="Password" name="password" id="password" />
+                    <input type="password" placeholder="New Password" name="new_password" id="new_password" />
+                    <input type="password" placeholder="Confirm New Password" name="new_password_confirmation" id="new_password_confirmation"
+                    />
+                    <button class="update-profile-form-btn" type="submit"> Update Profile </button>
+        </div>
+    </form>
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>
